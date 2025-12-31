@@ -55,7 +55,7 @@ const Home = () => {
                         className="px-6 py-3 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-lg font-medium transition-all duration-300 flex items-center gap-2"
                     >
                         <FileText className="w-4 h-4" />
-                        <span>Download Resume</span>
+                        <span>Download My Resume</span>
                     </a>
 
                     <div className="flex items-center gap-2 ml-2">
