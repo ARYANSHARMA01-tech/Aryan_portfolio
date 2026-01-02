@@ -18,18 +18,17 @@ const Contact = () => {
             value: 'sharmaaryan1603@gmail.com',
             action: 'mailto:sharmaaryan1603@gmail.com'
         },
-
         {
             icon: Github,
             label: 'GitHub',
-            value: 'github.com/sharmaaryan1603',
+            value: 'github.com/ARYANSHARMA01-tech',
             action: 'https://github.com/ARYANSHARMA01-tech'
         },
         {
             icon: Linkedin,
             label: 'LinkedIn',
-            value: 'linkedin.com/in/aryan-sharma',
-            action: 'https://www.linkedin.com/in/aryan-sharma1603/'
+            value: 'linkedin.com/in/aryan-sharma1603',
+            action: 'https://www.linkedin.com/in/aryan-sharma1603'
         },
     ];
 
@@ -49,26 +48,36 @@ const Contact = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {contactDetails.map((item) => (
-                        <div key={item.label} className="glass p-6 rounded-xl flex items-center justify-between group hover:border-primary/50 transition-colors">
-                            <div className="flex items-center gap-4">
-                                <div className="p-3 bg-white/5 rounded-full group-hover:bg-primary/20 transition-colors text-white group-hover:text-primary">
+                        <a
+                            key={item.label}
+                            href={item.action}
+                            target={item.label === 'Email' ? '_self' : '_blank'}
+                            rel={item.label === 'Email' ? undefined : "noopener noreferrer"}
+                            className="glass p-6 rounded-xl flex items-center justify-between group hover:border-primary/50 transition-all hover:bg-white/5 cursor-pointer hover:scale-[1.02]"
+                        >
+                            <div className="flex items-center gap-4 min-w-0 flex-1">
+                                <div className="p-3 bg-white/5 rounded-full group-hover:bg-primary/20 transition-colors text-white group-hover:text-primary shrink-0">
                                     <item.icon className="w-6 h-6" />
                                 </div>
-                                <div>
-                                    <p className="text-sm text-gray-400">{item.label}</p>
-                                    <a href={item.action} className="text-lg font-medium text-white hover:text-accent transition-colors">
+                                <div className="min-w-0 flex-1">
+                                    <p className="text-sm text-gray-400 mb-0.5">{item.label}</p>
+                                    <span className="text-base sm:text-lg font-medium text-white group-hover:text-accent transition-colors truncate block">
                                         {item.value.replace('https://', '')}
-                                    </a>
+                                    </span>
                                 </div>
                             </div>
                             <button
-                                onClick={() => handleCopy(item.value, item.label)}
-                                className="p-2 text-gray-500 hover:text-white transition-colors"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    handleCopy(item.value, item.label);
+                                }}
+                                className="p-2 text-gray-500 hover:text-white transition-colors z-10 relative"
                                 title="Copy to clipboard"
                             >
                                 {copied === item.label ? <Check className="w-5 h-5 text-green-500" /> : <Copy className="w-5 h-5" />}
                             </button>
-                        </div>
+                        </a>
                     ))}
                 </div>
             </motion.div>

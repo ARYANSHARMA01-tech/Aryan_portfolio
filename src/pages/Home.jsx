@@ -55,14 +55,14 @@ const Home = () => {
                         className="px-6 py-3 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-lg font-medium transition-all duration-300 flex items-center gap-2"
                     >
                         <FileText className="w-4 h-4" />
-                        <span>Download Resume</span>
+                        <span>View Resume</span>
                     </a>
 
                     <div className="flex items-center gap-2 ml-2">
                         <a href="https://github.com/sharmaaryan1603" target="_blank" rel="noopener noreferrer" className="p-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-300">
                             <Github className="w-5 h-5" />
                         </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-300">
+                        <a href="https://www.linkedin.com/in/aryan-sharma1603" target="_blank" rel="noopener noreferrer" className="p-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-300">
                             <Linkedin className="w-5 h-5" />
                         </a>
                     </div>
