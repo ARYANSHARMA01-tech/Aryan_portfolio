@@ -40,8 +40,8 @@ const Navbar = () => {
     ];
 
     const socialLinks = [
-        { name: 'GitHub', url: 'https://github.com/sharmaaryan1603', icon: Github }, // Assuming GitHub URL based on email/context if available, otherwise generic
-        { name: 'LinkedIn', url: 'https://linkedin.com', icon: Linkedin },
+        { name: 'GitHub', url: 'https://github.com/ARYANSHARMA01-tech', icon: Github }, // Assuming GitHub URL based on email/context if available, otherwise generic
+        { name: 'LinkedIn', url: 'https://www.linkedin.com/in/aryan-sharma1603/', icon: Linkedin },
     ];
 
     return (
