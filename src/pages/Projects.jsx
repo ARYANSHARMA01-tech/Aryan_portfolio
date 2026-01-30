@@ -2,6 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Layers, Zap } from 'lucide-react';
 
+import medicalAssistantImg from '../assets/images/medical_assistant.png';
+import movieMateImg from '../assets/images/moviemate.png';
+import trippyImg from '../assets/images/trippy.png';
+import bookPublicationImg from '../assets/images/book_publication.png';
+import bookRecommendationImg from '../assets/images/book_recommendation.png';
+
 const Projects = () => {
     const projects = [
         {
@@ -14,7 +20,8 @@ const Projects = () => {
                 'Integrated Groq API for medically accurate responses in 3 languages.',
                 'Scalable architecture with FastAPI and React.js.'
             ],
-            links: { github: 'https://github.com/ARYANSHARMA01-tech/Medical-Assistant-Frontend-', demo: 'https://lnkd.in/gYt6PPjw' }
+            links: { github: 'https://github.com/ARYANSHARMA01-tech/Medical-Assistant-Frontend-', demo: 'https://lnkd.in/gYt6PPjw' },
+            image: medicalAssistantImg
         },
         {
             title: 'MovieMate – Personalized Movie Recommender',
@@ -26,7 +33,8 @@ const Projects = () => {
                 'Instant recommendations with interactive Streamlit UI.',
                 'Deployed on Streamlit Community Cloud.'
             ],
-            links: { github: 'https://github.com/ARYANSHARMA01-tech/Movie_Recommendation_System', demo: 'https://movierecommendationsystem01.streamlit.app/' }
+            links: { github: 'https://github.com/ARYANSHARMA01-tech/Movie_Recommendation_System', demo: 'https://movierecommendationsystem01.streamlit.app/' },
+            image: movieMateImg
         },
         {
             title: 'Trippy – AI-Powered Travel Planning Assistant',
@@ -37,7 +45,8 @@ const Projects = () => {
                 'Seamless integration of LLMs for personalized travel suggestions.',
                 'Real-time data fetching and processing.'
             ],
-            links: { github: 'https://github.com/ARYANSHARMA01-tech', demo: 'https://trippy-trip-planner.streamlit.app/' }
+            links: { github: 'https://github.com/ARYANSHARMA01-tech', demo: 'https://trippy-trip-planner.streamlit.app/' },
+            image: trippyImg
         },
         {
             title: 'Automated Book Publication Workflow',
@@ -48,7 +57,8 @@ const Projects = () => {
                 'Integrated ChromaDB for semantic metadata storage and retrieval.',
                 'Automated web interactions using Playwright.'
             ],
-            links: { github: 'https://github.com/ARYANSHARMA01-tech', demo: '#' }
+            links: { github: 'https://github.com/ARYANSHARMA01-tech', demo: '#' },
+            image: bookPublicationImg
         },
         {
             title: 'Book Recommendation System',
@@ -59,7 +69,8 @@ const Projects = () => {
                 'Optimized vector similarity calculations for low latency.',
                 'Deployed as a lightweight Flask API.'
             ],
-            links: { github: 'https://github.com/ARYANSHARMA01-tech', demo: 'https://book-recommendation-system-9vxu.onrender.com/' }
+            links: { github: 'https://github.com/ARYANSHARMA01-tech', demo: 'https://book-recommendation-system-9vxu.onrender.com/' },
+            image: bookRecommendationImg
         }
     ];
 
@@ -104,6 +115,14 @@ const Projects = () => {
                                         <ExternalLink className="w-5 h-5" />
                                     </a>
                                 </div>
+                            </div>
+
+                            <div className="mb-6 rounded-xl overflow-hidden border border-white/10 group-hover:border-primary/30 transition-all duration-300 bg-gray-900/50 flex items-center justify-center aspect-video">
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500"
+                                />
                             </div>
 
                             <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
