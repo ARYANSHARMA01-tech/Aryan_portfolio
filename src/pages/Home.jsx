@@ -59,7 +59,7 @@ const Home = () => {
                     </a>
 
                     <div className="flex items-center gap-2 ml-2">
-                        <a href="https://github.com/sharmaaryan1603" target="_blank" rel="noopener noreferrer" className="p-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-300">
+                        <a href="https://github.com/ARYANSHARMA01-tech/" target="_blank" rel="noopener noreferrer" className="p-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-300">
                             <Github className="w-5 h-5" />
                         </a>
                         <a href="https://www.linkedin.com/in/aryan-sharma1603" target="_blank" rel="noopener noreferrer" className="p-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-300">
